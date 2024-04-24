@@ -7,7 +7,7 @@ function InfoBox() {
 
     return (
         <Container className="p-4">
-            <Col className="col-8 mx-auto border p-3">
+            <Col className="col-12 col-md-8 mx-auto border p-3">
                 <Row className={row_classes}>
                     <h1>MENU</h1>
                 </Row>

@@ -29,7 +29,8 @@ function Item(props) {
         <Row className={item_classes}>
             <Col>
                 <Row className={row_classes}>
-                    {name} - {type} . . . {price}
+                    <strong>{name}</strong>
+                    ${price}
                 </Row>
                 <Row className={row_classes}>
                     {description}
@@ -119,7 +120,7 @@ function RestMenu() {
 
     return (
         <Container className="p-4">
-            <Col className="col-8 mx-auto border p-3">
+            <Col className="col-12 col-md-8 mx-auto border p-3">
                 <Category category="BREAKFAST"/>
                 {breakfastItems.map((new_item) => {
                     return new_item

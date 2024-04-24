@@ -4,18 +4,17 @@
   // The restaurant's name (DONE)
   // The restaurant's address (DONE)
   // The restaurant's hours of operation (DONE)
-// Access the API using Axios installed with npm. 
-// Create a dynamic restaurant menu
-// Choose a specific menu section type to display (Appetizers, Pasta, Sandwiches, etc)
-// Dynamically render at least 15 menu items.
-// Manage the React Component State
-// Website must be responsive
-// Website should be mobile first
+// Access the API using Axios installed with npm. (DONE) 
+// Create a dynamic restaurant menu (DONE)
+// Choose a specific menu section type to display (Appetizers, Pasta, Sandwiches, etc) (DONE)
+// Dynamically render at least 15 menu items. (DONE)
+// Manage the React Component State (DONE) 
+// Website must be responsive (DONE)
+// Website should be mobile first (DONE)
 
 // Should Have
 // Multiple menu categories with a way to switch between them.
 // Dropdown that filters menu in some way (category, cuisine, price, spice, time of day)
-
 
 // Could Have
 // Create your own JSON and upload to the jsonkeeper.com to customize your items. (Structure could also change)
