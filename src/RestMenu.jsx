@@ -43,7 +43,12 @@ function RestMenu() {
     //needs to construct the menu dynamically from the API call
 
     let [menuItems, setItems] = useState([])
-    let [processedItems, setProcessedItems] = useState([])
+
+    let [breakfastItems, setBreakfast] = useState([])
+    let [appetizerItems, setAppetizers] = useState([])
+    let [lunchItems, setLunch] = useState([])
+    let [dinnerItems, setDinner] = useState([])
+    let [drinkItems, setDrinks] = useState([])
 
     function GetMenuItems() {
         axios.get("https://www.jsonkeeper.com/b/MDXW")
@@ -56,27 +61,52 @@ function RestMenu() {
                 // handle error
                 console.log(error);
             })
-            .finally(function () {
-                // always executed
-                console.log("Executed Axios API Request!")
-            });
     }
 
     function processItems() {
-        let newItems = []
+        let newItems
+
+        let breakfast = []
+        let appetizers = []
+        let lunch = []
+        let dinner = []
+        let drinks = []
 
         for (let i = 0; i < menuItems.length; i++) {
             const name = menuItems[i].title
             const type = menuItems[i].cuisine_type
             const price = menuItems[i].price
             const description = menuItems[i].description
+            const category = menuItems[i].category
+
+            switch (category) {
+                case "Appetizer":
+                    newItems = appetizers
+                    break;
+                case "Breakfast":
+                    newItems = breakfast
+                    break;
+                case "Lunch":
+                    newItems = lunch
+                    break;
+                case "Dinner":
+                    newItems = dinner
+                    break;
+                case "Drink":
+                    newItems = drinks
+                    break;
+            }
 
             newItems.push(
                 <Item name={name} type={type} price={price} description={description}></Item>
             )
         }
 
-        setProcessedItems(newItems)
+        setAppetizers(appetizers)
+        setBreakfast(breakfast)
+        setDinner(dinner)
+        setDrinks(drinks)
+        setLunch(lunch)
     }
 
     useEffect((() => {
@@ -90,8 +120,24 @@ function RestMenu() {
     return (
         <Container className="p-4">
             <Col className="col-8 mx-auto border p-3">
-                <Category category="CATEGORY"/>
-                {processedItems.map((new_item) => {
+                <Category category="BREAKFAST"/>
+                {breakfastItems.map((new_item) => {
+                    return new_item
+                })}
+                <Category category="APPETIZERS"/>
+                {appetizerItems.map((new_item) => {
+                    return new_item
+                })}
+                <Category category="LUNCH"/>
+                {lunchItems.map((new_item) => {
+                    return new_item
+                })}
+                <Category category="DINNER"/>
+                {dinnerItems.map((new_item) => {
+                    return new_item
+                })}
+                <Category category="DRINKS"/>
+                {drinkItems.map((new_item) => {
                     return new_item
                 })}
             </Col>
