@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import InfoBox from "./InfoBox"
 
 const Title = () => {
   return (
@@ -13,6 +14,7 @@ function App() {
     <div className="p-5">
       <Link to='/about'>About</Link>
       <Title />
+      <InfoBox />
     </div>
   )
 }
