@@ -40,8 +40,11 @@ function Item(props) {
     )
 }
 
-function RestMenu() {
+function RestMenu(props) {
     //needs to construct the menu dynamically from the API call
+
+    const filter = props.filter
+    console.log(filter)
 
     let [menuItems, setItems] = useState([])
 
