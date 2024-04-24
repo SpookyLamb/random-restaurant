@@ -1,9 +1,9 @@
 // Must Have
 // Make some wireframes for the website design (include them in your repo as photos and/or screenshots) (DONE)
-// Generate the following information:\
-  // The restaurant's name (give it a good one!, we will crown a winner for the most creative)
-  // The restaurant's address
-  // The restaurant's hours of operation
+// Generate the following information:
+  // The restaurant's name (DONE)
+  // The restaurant's address (DONE)
+  // The restaurant's hours of operation (DONE)
 // Access the API using Axios installed with npm. 
 // Create a dynamic restaurant menu
 // Choose a specific menu section type to display (Appetizers, Pasta, Sandwiches, etc)

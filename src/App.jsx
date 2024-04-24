@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
 import InfoBox from "./InfoBox"
+import RestMenu from "./RestMenu"
 
 const Title = () => {
   return (
-    <h1>
-      Hello World!
+    <h1 className="text-center">
+      The Summer Demon's Diabolical Confections
     </h1>
   )
 }
@@ -12,9 +13,9 @@ const Title = () => {
 function App() {
   return (
     <div className="p-5">
-      <Link to='/about'>About</Link>
       <Title />
       <InfoBox />
+      <RestMenu />
     </div>
   )
 }
