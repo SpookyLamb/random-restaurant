@@ -9,11 +9,11 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse>
           <Nav className="mx-auto">
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-            <Nav.Link href="#link">Home</Nav.Link>
-            <Nav.Link href="#link">About</Nav.Link>
-            <Nav.Link href="#link">Menu</Nav.Link>
-            <Nav.Link href="#link">Contact</Nav.Link>
+            <Navbar.Brand className="rubik-mono" href="#home">THE SUMMER DEMON</Navbar.Brand>
+            <Nav.Link className="rubik-mono" href="#link">Home</Nav.Link>
+            <Nav.Link className="rubik-mono" href="#link">About</Nav.Link>
+            <Nav.Link className="rubik-mono" href="#link">Menu</Nav.Link>
+            <Nav.Link className="rubik-mono" href="#link">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

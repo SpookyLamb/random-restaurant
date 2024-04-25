@@ -12,7 +12,7 @@ function Category(props) {
     const cat_name = props.category
 
     return (
-        <Row className={row_classes}>
+        <Row className={row_classes + " rubik-mono pt-3 pb-1"}>
             <h2>{cat_name}</h2>
         </Row>
     )
@@ -29,13 +29,19 @@ function Item(props) {
     return (
         <Row className={item_classes}>
             <Col>
-                <Row className={row_classes}>
-                    <strong>{name}</strong>
-                    ${price}
+                <Row className={row_classes + " rubik-mono"}>
+                    <Col className="col-6 col-lg-12">
+                        <Row className={row_classes + " pb-2"}> <strong>{name}</strong> </Row>
+                        <Row className={row_classes}> ${price} </Row>
+                    </Col>
+                    <Col className="col-6 col-lg-12 d-flex justify-content-center">
+                        <Image className="food-image" src={image_path} />
+                    </Col>
                 </Row>
-                <Image className="food-image" src={image_path} />
-                <Row className={row_classes}>
-                    {description}
+                <Row className={row_classes + " shadows pt-3"}>
+                    <Col className="col-12 col-lg-8">
+                        {description}
+                    </Col> 
                 </Row>
             </Col>
         </Row>
