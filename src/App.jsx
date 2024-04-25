@@ -33,10 +33,10 @@ function App() {
             
             <Dropdown.Menu>
               <Dropdown.Item eventKey="">None</Dropdown.Item>
-              <Dropdown.Item eventKey="appetizers">Appetizers</Dropdown.Item>
-              <Dropdown.Item eventKey="breakfast">Breakfast</Dropdown.Item>
-              <Dropdown.Item eventKey="lunch">Lunch</Dropdown.Item>
-              <Dropdown.Item eventKey="dinner">Dinner</Dropdown.Item>
+              <Dropdown.Item eventKey="cookies">Cookies</Dropdown.Item>
+              <Dropdown.Item eventKey="cakes">Cakes</Dropdown.Item>
+              <Dropdown.Item eventKey="doughnuts">Doughnuts</Dropdown.Item>
+              <Dropdown.Item eventKey="pastries">Pastries</Dropdown.Item>
               <Dropdown.Item eventKey="drinks">Drinks</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

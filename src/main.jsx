@@ -1,4 +1,4 @@
-// Must Have
+// Must Have (DONE)
 // Make some wireframes for the website design (include them in your repo as photos and/or screenshots) (DONE)
 // Generate the following information:
   // The restaurant's name (DONE)
@@ -12,7 +12,7 @@
 // Website must be responsive (DONE)
 // Website should be mobile first (DONE)
 
-// Should Have
+// Should Have (DONE)
 // Multiple menu categories with a way to switch between them. (DONE)
 // Dropdown that filters menu in some way (category, cuisine, price, spice, time of day) (DONE)
 

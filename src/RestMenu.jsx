@@ -19,7 +19,7 @@ function Category(props) {
 
 function Item(props) {
     const name = props.name
-    const type = props.type
+    //const type = props.type
     const price = props.price
     const description = props.description
 
@@ -71,7 +71,7 @@ function RestMenu(props) {
     let [drinkItems, setDrinks] = useState([])
 
     function GetMenuItems() {
-        axios.get("https://www.jsonkeeper.com/b/MDXW")
+        axios.get("https://www.jsonkeeper.com/b/YENX")
             .then(function (response) {
                 // handle success
                 console.log(response.data);
@@ -94,22 +94,22 @@ function RestMenu(props) {
 
         for (let i = 0; i < menuItems.length; i++) {
             const name = menuItems[i].title
-            const type = menuItems[i].cuisine_type
+            //const type = menuItems[i].cuisine_type
             const price = menuItems[i].price
             const description = menuItems[i].description
             const category = menuItems[i].category
 
             switch (category) {
-                case "Appetizer":
+                case "Cookie":
                     newItems = appetizers
                     break;
-                case "Breakfast":
+                case "Cake":
                     newItems = breakfast
                     break;
-                case "Lunch":
+                case "Doughnut":
                     newItems = lunch
                     break;
-                case "Dinner":
+                case "Pastry":
                     newItems = dinner
                     break;
                 case "Drink":
@@ -118,7 +118,7 @@ function RestMenu(props) {
             }
 
             newItems.push(
-                <Item name={name} type={type} price={price} description={description}></Item>
+                <Item name={name} price={price} description={description}></Item>
             )
         }
 
@@ -143,16 +143,16 @@ function RestMenu(props) {
         let filtered_items = []
 
         switch (filter) {
-            case "appetizers":
+            case "cookies":
                 filtered_items = appetizerItems
                 break;
-            case "breakfast":
+            case "cakes":
                 filtered_items = breakfastItems
                 break;
-            case "lunch":
+            case "doughnuts":
                 filtered_items = lunchItems
                 break;
-            case "dinner":
+            case "pastries":
                 filtered_items = dinnerItems
                 break;
             case "drinks":
@@ -175,19 +175,19 @@ function RestMenu(props) {
         return (
             <Container className="p-4">
                 <Col className="col-12 col-md-8 mx-auto border p-3">
-                    <Category category="BREAKFAST"/>
-                    {breakfastItems.map((new_item) => {
-                        return new_item
-                    })}
-                    <Category category="APPETIZERS"/>
+                    <Category category="COOKIES"/>
                     {appetizerItems.map((new_item) => {
                         return new_item
                     })}
-                    <Category category="LUNCH"/>
+                    <Category category="CAKES"/>
+                    {breakfastItems.map((new_item) => {
+                        return new_item
+                    })}
+                    <Category category="DOUGHNUTS"/>
                     {lunchItems.map((new_item) => {
                         return new_item
                     })}
-                    <Category category="DINNER"/>
+                    <Category category="PASTRIES"/>
                     {dinnerItems.map((new_item) => {
                         return new_item
                     })}
