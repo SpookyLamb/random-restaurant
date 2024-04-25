@@ -1,0 +1,130 @@
+[
+    {
+        "id": 1,
+        "title": "Sugar Cookie",
+        "category": "Cookie",
+        "imagepath": "./src/assets/sugar-cookie.jpg",
+        "description": "A simple sugar cookie, glazed with vanilla frosting and decorated with rainbow sprinkles!",
+        "price": 1.66 
+    },
+    {
+        "id": 2,
+        "title": "Devil's Food Cake",
+        "category": "Cake",
+        "imagepath": "./src/assets/devils-food-cake.jpg",
+        "description": "A layer cake baked with the Devil's own recipe! Made with real chocolate baking squares. The flavor is to DIE for!",
+        "price": "6.66 per slice"
+    },
+    {
+        "id": 3,
+        "title": "Glazed Donut",
+        "category": "Doughnut",
+        "imagepath": "./src/assets/glazed-donut.jpg",
+        "description": "A basic fried and glazed doughnut. Mundane, but delicious!",
+        "price": 2.66
+    },
+    {
+        "id": 4,
+        "title": "Croissant",
+        "category": "Pastry",
+        "imagepath": "./src/assets/croissant.jpg",
+        "description": "A classic, crescent-shaped French pastry! WARNING: It may recall memories best left forgotten.",
+        "price": 4.66 
+    },
+    {
+        "id": 5,
+        "title": "Black Coffee",
+        "category": "Drink",
+        "imagepath": "./src/assets/black-coffee.jpg",
+        "description": "Espresso coffee, served black (like your soul)!",
+        "price": 3.66
+    },
+    {
+        "id": 6,
+        "title": "Chocolate Chip Cookie",
+        "category": "Cookie",
+        "imagepath": "./src/assets/chocolate-chip.jpg",
+        "description": "A classic cookie, made with chocolate chips. Please ignore any screaming coming from the cookie.",
+        "price": 1.66 
+    },
+    {
+        "id": 7,
+        "title": "Macaron",
+        "category": "Cookie",
+        "imagepath": "./src/assets/macarons.jpg",
+        "description": "A meringue-based cookie that originates from France, the most DEVILISH of nations.",
+        "price": 1.66
+    },
+    {
+        "id": 8,
+        "title": "Chocolate Supreme Cookie",
+        "category": "Cookie",
+        "imagepath": "./src/assets/choco-supreme-cookie.jpg",
+        "description": "A dark chocolate cookie, baked with white chocolate and milk chocolate chunks. All chocolate was harvested with extra human suffering.",
+        "price": 2.66
+    },
+    {
+        "id": 9,
+        "title": "Soul Cookie",
+        "category": "Cookie",
+        "imagepath": "./src/assets/soul-cookie.jpg",
+        "description": "Made with REAL human souls! Soul-flavored substitute available on request for vegetarians and vegans.",
+        "price": 6.66
+    },
+    {
+        "id": 10,
+        "title": "Tempting Apple Cake",
+        "category": "Cake",
+        "imagepath": "./src/assets/apple-cake.jpg",
+        "description": "A cake featuring apples harvested directly from the Tree of Knowledge, topped with caramel icing. Taste it, and you too will understand Eve's temptation!",
+        "price": "4.66 per slice"
+    },
+    {
+        "id": 11,
+        "title": "Angel Cake",
+        "category": "Cake",
+        "imagepath": "./src/assets/angel-cake.jpg",
+        "description": "A sponge cake baked with an AUTHENTIC, immortal angel! You can taste its delicious suffering with every bite! Available only as whole cakes.",
+        "price": 66.66
+    },
+    {
+        "id": 12,
+        "title": "Heart Doughnut",
+        "category": "Doughnut",
+        "imagepath": "./src/assets/heart-donut.jpg",
+        "description": "A heart-shaped doughnut, filled with blood-flavored strawberry jam!",
+        "price": 3.66
+    },
+    {
+        "id": 13,
+        "title": "Devil's Mini Doughnuts",
+        "category": "Doughnut",
+        "imagepath": "./src/assets/devils-donuts.jpg",
+        "description": "Chocolate mini doughnuts, so delicious that you will become hopelessly addicted to the flavor for ALL ETERNITY!",
+        "price": 6.66
+    },
+    {
+        "id": 14,
+        "title": "Crêpes Suzette",
+        "category": "Pastry",
+        "imagepath": "./src/assets/crepes.jpg",
+        "description": "A French dessert consisting of a crêpe, topped with a sauce of caramel and butter, served flambé with the fires of the Hells!",
+        "price": 9.66 
+    },
+    {
+        "id": 15,
+        "title": "Éclair",
+        "category": "Pastry",
+        "imagepath": "./src/assets/eclair.jpg",
+        "description": "An oblong pastry made with choux dough and topped with chocolate icing! EXCLUSIVELY baked by French orphans!",
+        "price": 5.66 
+    },
+    {
+        "id": 16,
+        "title": "Bloody Mary",
+        "category": "Drink",
+        "imagepath": "./src/assets/bloody-mary.jpg",
+        "description": "An alcholic cocktail containing vodka and the GENUINE blood of the Virgin Mary herself! Not available for those under the age of 21 or those without valid ID.",
+        "price": 16.66
+    }
+]

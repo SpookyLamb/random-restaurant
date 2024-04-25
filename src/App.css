@@ -3,13 +3,47 @@ html {
 }
 body {
   height: 100%;
+  background-color: #050505;
 }
 #root {
   display: flex;
   height: 100%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 #page-content {
   flex-grow: 2;
+}
+
+.food-image {
+  height: 16vh;
+  width: 16vh;
+}
+
+.shadows {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #dc3545;
+}
+
+.rubik-mono {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #dc3545;
+}
+
+.navlink:hover {
+  color: #69171f;
+}
+
+.rubik-mono-white {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-light {
+  background-color: #050505;
 }

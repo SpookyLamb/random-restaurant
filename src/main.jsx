@@ -1,3 +1,33 @@
+// Must Have (DONE)
+// Make some wireframes for the website design (include them in your repo as photos and/or screenshots) (DONE)
+// Generate the following information:
+  // The restaurant's name (DONE)
+  // The restaurant's address (DONE)
+  // The restaurant's hours of operation (DONE)
+// Access the API using Axios installed with npm. (DONE) 
+// Create a dynamic restaurant menu (DONE)
+// Choose a specific menu section type to display (Appetizers, Pasta, Sandwiches, etc) (DONE)
+// Dynamically render at least 15 menu items. (DONE)
+// Manage the React Component State (DONE) 
+// Website must be responsive (DONE)
+// Website should be mobile first (DONE)
+
+// Should Have (DONE)
+// Multiple menu categories with a way to switch between them. (DONE)
+// Dropdown that filters menu in some way (category, cuisine, price, spice, time of day) (DONE)
+
+// Could Have
+// Create your own JSON and upload to the jsonkeeper.com to customize your items. (DONE) 
+// Add images for menu items. (DONE)
+// Text search to filter menu 
+// Include a different 'specials' menu for each day of the week that the restaurant is open and show that menu based on the current day (should prove to work throughout the week) as well as what was on the specials menu yesterday/ what will be on the specials menu tomorrow. Can be done randomly.  Could store value in localStorage so it doesn’t change.
+
+// Wish List
+// Let a user add comment to menu item 
+// Let a user like or dislike menu items - show counts
+// Embed a Google Map component showing the location of the restaurant.  A good resource:  https://www.npmjs.com/package/@googlemaps/js-api-loader
+// Add a ‘shopping cart’ to add items to for online ordering.  Save the data via localStorage. 
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
