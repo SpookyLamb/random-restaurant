@@ -40,10 +40,26 @@ function Item(props) {
     )
 }
 
+function CatandItems(props) {
+    //takes a category name and a list (array) of items and spits out a Category and multiple Item elements
+
+    const category = props.category.toUpperCase()
+    const items = props.items
+
+    return (
+        <>
+            <Category category={category} />
+            {items.map((new_item) => {
+                return new_item
+            })}
+        </>
+    )
+}
+
 function RestMenu(props) {
     //needs to construct the menu dynamically from the API call
 
-    const filter = props.filter
+    const filter = props.filter.toLowerCase()
     console.log(filter)
 
     let [menuItems, setItems] = useState([])
@@ -121,32 +137,68 @@ function RestMenu(props) {
         processItems()
     }), [menuItems])
 
-    return (
-        <Container className="p-4">
-            <Col className="col-12 col-md-8 mx-auto border p-3">
-                <Category category="BREAKFAST"/>
-                {breakfastItems.map((new_item) => {
-                    return new_item
-                })}
-                <Category category="APPETIZERS"/>
-                {appetizerItems.map((new_item) => {
-                    return new_item
-                })}
-                <Category category="LUNCH"/>
-                {lunchItems.map((new_item) => {
-                    return new_item
-                })}
-                <Category category="DINNER"/>
-                {dinnerItems.map((new_item) => {
-                    return new_item
-                })}
-                <Category category="DRINKS"/>
-                {drinkItems.map((new_item) => {
-                    return new_item
-                })}
-            </Col>
-        </Container>
-    )
+    function getItemSet() {
+        console.log("Getting item set.")
+
+        let filtered_items = []
+
+        switch (filter) {
+            case "appetizers":
+                filtered_items = appetizerItems
+                break;
+            case "breakfast":
+                filtered_items = breakfastItems
+                break;
+            case "lunch":
+                filtered_items = lunchItems
+                break;
+            case "dinner":
+                filtered_items = dinnerItems
+                break;
+            case "drinks":
+                filtered_items = drinkItems
+                break;
+        }
+
+        return <CatandItems category={filter} items={filtered_items}/>
+    }
+
+    if (filter) {
+        return (
+            <Container className="p-4">
+                <Col className="col-12 col-md-8 mx-auto border p-3">
+                    {getItemSet()}
+                </Col>
+            </Container>
+        )
+    } else {
+        return (
+            <Container className="p-4">
+                <Col className="col-12 col-md-8 mx-auto border p-3">
+                    <Category category="BREAKFAST"/>
+                    {breakfastItems.map((new_item) => {
+                        return new_item
+                    })}
+                    <Category category="APPETIZERS"/>
+                    {appetizerItems.map((new_item) => {
+                        return new_item
+                    })}
+                    <Category category="LUNCH"/>
+                    {lunchItems.map((new_item) => {
+                        return new_item
+                    })}
+                    <Category category="DINNER"/>
+                    {dinnerItems.map((new_item) => {
+                        return new_item
+                    })}
+                    <Category category="DRINKS"/>
+                    {drinkItems.map((new_item) => {
+                        return new_item
+                    })}
+                </Col>
+            </Container>
+        )
+    }
 }
 
 export default RestMenu

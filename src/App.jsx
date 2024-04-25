@@ -32,6 +32,7 @@ function App() {
             </Dropdown.Toggle>
             
             <Dropdown.Menu>
+              <Dropdown.Item eventKey="">None</Dropdown.Item>
               <Dropdown.Item eventKey="appetizers">Appetizers</Dropdown.Item>
               <Dropdown.Item eventKey="breakfast">Breakfast</Dropdown.Item>
               <Dropdown.Item eventKey="lunch">Lunch</Dropdown.Item>
