@@ -7,7 +7,7 @@ import { useState } from "react"
 
 const Title = () => {
   return (
-    <h1 className="text-center">
+    <h1 className="text-center p-3">
       The Summer Demon's Diabolical Confections
     </h1>
   )

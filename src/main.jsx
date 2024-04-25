@@ -13,11 +13,11 @@
 // Website should be mobile first (DONE)
 
 // Should Have
-// Multiple menu categories with a way to switch between them.
-// Dropdown that filters menu in some way (category, cuisine, price, spice, time of day)
+// Multiple menu categories with a way to switch between them. (DONE)
+// Dropdown that filters menu in some way (category, cuisine, price, spice, time of day) (DONE)
 
 // Could Have
-// Create your own JSON and upload to the jsonkeeper.com to customize your items. (Structure could also change)
+// Create your own JSON and upload to the jsonkeeper.com to customize your items. 
 // Add images for menu items.
 // Pepper Emojis/icons/pictures for spicy level
 // Text search to filter menu

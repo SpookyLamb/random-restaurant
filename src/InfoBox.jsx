@@ -6,15 +6,15 @@ function InfoBox() {
     const row_classes = "d-flex justify-content-center text-center"
 
     return (
-        <Container className="p-4">
+        <Container className="pb-4">
             <Col className="col-12 col-md-8 mx-auto border p-3">
                 <Row className={row_classes}>
-                    <h1>MENU</h1>
+                    <h1>OUR MENU</h1>
                 </Row>
                 <Row className={row_classes}>The Summer Demon</Row>
                 <Row className={row_classes}>348 E Main Street, Lexington, KY</Row>
-                <Row className={row_classes}>(859) 555-5555</Row>
-                <Row className={row_classes}>Monday - Friday, 8 AM - 4 PM</Row>
+                <Row className={row_classes}>(859) 666-6666</Row>
+                <Row className={row_classes}>Sundays, June - August, 6 AM - 6 PM</Row>
             </Col>
         </Container>
     )
