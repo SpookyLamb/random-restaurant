@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 import { useState } from "react";
 import { useEffect } from 'react';
+import { Image } from 'react-bootstrap';
 
 const row_classes = "d-flex justify-content-center text-center"
 
@@ -19,7 +20,7 @@ function Category(props) {
 
 function Item(props) {
     const name = props.name
-    //const type = props.type
+    const image_path = props.imagepath
     const price = props.price
     const description = props.description
 
@@ -32,6 +33,7 @@ function Item(props) {
                     <strong>{name}</strong>
                     ${price}
                 </Row>
+                <Image className="food-image" src={image_path} />
                 <Row className={row_classes}>
                     {description}
                 </Row>
@@ -60,7 +62,6 @@ function RestMenu(props) {
     //needs to construct the menu dynamically from the API call
 
     const filter = props.filter.toLowerCase()
-    console.log(filter)
 
     let [menuItems, setItems] = useState([])
 
@@ -71,7 +72,7 @@ function RestMenu(props) {
     let [drinkItems, setDrinks] = useState([])
 
     function GetMenuItems() {
-        axios.get("https://www.jsonkeeper.com/b/YENX")
+        axios.get("https://www.jsonkeeper.com/b/2JVK")
             .then(function (response) {
                 // handle success
                 console.log(response.data);
@@ -98,6 +99,7 @@ function RestMenu(props) {
             const price = menuItems[i].price
             const description = menuItems[i].description
             const category = menuItems[i].category
+            const imagepath = menuItems[i].imagepath
 
             switch (category) {
                 case "Cookie":
@@ -118,7 +120,7 @@ function RestMenu(props) {
             }
 
             newItems.push(
-                <Item name={name} price={price} description={description}></Item>
+                <Item name={name} price={price} description={description} imagepath={imagepath}></Item>
             )
         }
 

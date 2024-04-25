@@ -17,9 +17,8 @@
 // Dropdown that filters menu in some way (category, cuisine, price, spice, time of day) (DONE)
 
 // Could Have
-// Create your own JSON and upload to the jsonkeeper.com to customize your items. 
+// Create your own JSON and upload to the jsonkeeper.com to customize your items. (DONE) 
 // Add images for menu items.
-// Pepper Emojis/icons/pictures for spicy level
 // Text search to filter menu
 // Include a different 'specials' menu for each day of the week that the restaurant is open and show that menu based on the current day (should prove to work throughout the week) as well as what was on the specials menu yesterday/ what will be on the specials menu tomorrow. Can be done randomly.  Could store value in localStorage so it doesn’t change.
 
