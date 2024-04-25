@@ -123,7 +123,7 @@
         "id": 16,
         "title": "Bloody Mary",
         "category": "Drink",
-        "imagepath": "./src/assets/blood-mary.jpg",
+        "imagepath": "./src/assets/bloody-mary.jpg",
         "description": "An alcholic cocktail containing vodka and the GENUINE blood of the Virgin Mary herself! Not available for those under the age of 21 or those without valid ID.",
         "price": 16.66
     }

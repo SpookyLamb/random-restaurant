@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function Footer() {
-  const row_classes = "d-flex justify-content-center text-center p-1"
+  const row_classes = "d-flex justify-content-center text-center"
 
   return (
     <Container className="border pt-1">
@@ -17,7 +17,10 @@ function Footer() {
         Our Demonic Confections are available for Takeout, Pickup, or Dine-In!
       </Row>
       <Row className={row_classes}>
-        Sundays, June - August, 6 AM - 6 PM
+        Hours are Sundays, June - August, 6 AM - 6 PM
+      </Row>
+      <Row className={row_classes}>
+        Contact us via phone at (859) 666-6666, or email us at thesummerdemon@hotsingledevils.com
       </Row>
     </Container>
   )

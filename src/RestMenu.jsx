@@ -72,7 +72,7 @@ function RestMenu(props) {
     let [drinkItems, setDrinks] = useState([])
 
     function GetMenuItems() {
-        axios.get("https://www.jsonkeeper.com/b/2JVK")
+        axios.get("https://www.jsonkeeper.com/b/NXYW")
             .then(function (response) {
                 // handle success
                 console.log(response.data);
