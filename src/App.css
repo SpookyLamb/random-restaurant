@@ -34,6 +34,10 @@ body {
   color: #dc3545;
 }
 
+.navlink:hover {
+  color: #69171f;
+}
+
 .rubik-mono-white {
   font-family: "Rubik Mono One", monospace;
   font-weight: 400;
