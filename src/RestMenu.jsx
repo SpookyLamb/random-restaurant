@@ -24,7 +24,7 @@ function Item(props) {
     const price = props.price
     const description = props.description
 
-    const item_classes = row_classes + " p-3"
+    const item_classes = row_classes + " p-2"
 
     return (
         <Row className={item_classes}>
@@ -32,14 +32,14 @@ function Item(props) {
                 <Row className={row_classes + " rubik-mono"}>
                     <Col className="col-6 col-lg-12">
                         <Row className={row_classes + " pb-2"}> <strong>{name}</strong> </Row>
-                        <Row className={row_classes}> ${price} </Row>
+                        <Row className={row_classes + " pb-2 fs-4"}> ${price} </Row>
                     </Col>
                     <Col className="col-6 col-lg-12 d-flex justify-content-center">
-                        <Image className="food-image" src={image_path} />
+                        <Image className="food-image border" src={image_path} />
                     </Col>
                 </Row>
-                <Row className={row_classes + " shadows pt-3"}>
-                    <Col className="col-12 col-lg-8">
+                <Row className={row_classes + " shadows pt-4 pb-3"}>
+                    <Col className="col-12 col-lg-8 fs-5">
                         {description}
                     </Col> 
                 </Row>
@@ -78,7 +78,7 @@ function RestMenu(props) {
     let [drinkItems, setDrinks] = useState([])
 
     function GetMenuItems() {
-        axios.get("https://www.jsonkeeper.com/b/NXYW")
+        axios.get("https://raw.githubusercontent.com/SpookyLamb/food-list/main/confections.json")
             .then(function (response) {
                 // handle success
                 console.log(response.data);
@@ -174,7 +174,7 @@ function RestMenu(props) {
     if (filter) {
         return (
             <Container className="p-4">
-                <Col className="col-12 col-md-8 mx-auto border p-3">
+                <Col className="col-12 col-lg-8 mx-auto border p-3">
                     {getItemSet()}
                 </Col>
             </Container>
@@ -182,7 +182,7 @@ function RestMenu(props) {
     } else {
         return (
             <Container className="p-4">
-                <Col className="col-12 col-md-8 mx-auto border p-3">
+                <Col className="col-12 col-lg-8 mx-auto border p-3">
                     <Category category="COOKIES"/>
                     {appetizerItems.map((new_item) => {
                         return new_item

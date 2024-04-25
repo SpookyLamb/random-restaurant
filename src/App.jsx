@@ -7,9 +7,11 @@ import { useState } from "react"
 
 const Title = () => {
   return (
-    <h1 className="text-center p-3 rubik-mono">
-      The Summer Demon's Diabolical Confections
-    </h1>
+    <Col className="col-12 col-lg-8 mx-auto">
+      <h1 className="text-center p-3 rubik-mono">
+        The Summer Demon's Diabolical Confections
+      </h1>
+    </Col>
   )
 }
 
@@ -27,7 +29,7 @@ function App() {
     return (
       <Col className="mx-auto d-flex justify-content-center">
           <Dropdown onSelect={onFilterSelected}>
-            <Dropdown.Toggle className="rubik-mono">
+            <Dropdown.Toggle className="rubik-mono-white" variant="danger">
               Filter
             </Dropdown.Toggle>
             

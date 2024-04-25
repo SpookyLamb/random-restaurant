@@ -8,7 +8,7 @@ function InfoBox() {
 
     return (
         <Container className="pb-4">
-            <Col className="col-12 col-md-8 mx-auto border p-3">
+            <Col className="col-12 col-lg-8 mx-auto border p-3">
                 <Row className={row_classes + " rubik-mono"}>
                     <h1>OUR MENU</h1>
                 </Row>
