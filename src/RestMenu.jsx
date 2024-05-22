@@ -20,7 +20,7 @@ function Category(props) {
 
 function Item(props) {
     const name = props.name
-    const image_path = props.imagepath
+    const image_path = "./src/assets/" + props.imagepath
     const price = props.price
     const description = props.description
 
@@ -78,7 +78,8 @@ function RestMenu(props) {
     let [drinkItems, setDrinks] = useState([])
 
     function GetMenuItems() {
-        axios.get("https://raw.githubusercontent.com/SpookyLamb/food-list/main/confections.json")
+        // axios.get("https://raw.githubusercontent.com/SpookyLamb/food-list/main/confections.json")
+        axios.get("http://127.0.0.1:8000/menu_items/")
             .then(function (response) {
                 // handle success
                 console.log(response.data);
@@ -100,12 +101,12 @@ function RestMenu(props) {
         let drinks = []
 
         for (let i = 0; i < menuItems.length; i++) {
-            const name = menuItems[i].title
+            const name = menuItems[i].name
             //const type = menuItems[i].cuisine_type
             const price = menuItems[i].price
             const description = menuItems[i].description
             const category = menuItems[i].category
-            const imagepath = menuItems[i].imagepath
+            const imagepath = menuItems[i].picture
 
             switch (category) {
                 case "Cookie":

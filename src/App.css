@@ -34,8 +34,12 @@ body {
   color: #dc3545;
 }
 
+.navlink {
+  color: #dc3545 !important;
+}
+
 .navlink:hover {
-  color: #69171f;
+  color: #69171f !important;
 }
 
 .rubik-mono-white {

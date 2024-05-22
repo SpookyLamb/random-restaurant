@@ -45,6 +45,7 @@ import App from './App'
 import ErrorPage from './ErrorPage'
 import Header from './Header'
 import Footer from './Footer'
+import Order from './Order'
 
 const site = import.meta.env.BASE_URL
 
@@ -72,8 +73,8 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />
       },
       {
-        path: '/about',
-        element: <About />
+        path: '/order',
+        element: <Order />
       },
     ]
   }
