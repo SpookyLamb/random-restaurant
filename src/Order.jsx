@@ -1,17 +1,19 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Dropdown from "react-bootstrap/Dropdown"
+import Dropdown from "react-bootstrap/Dropdown";
+import Button from "react-bootstrap/Button";
 
 import axios from 'axios';
 import { useState } from "react";
 import { useEffect } from 'react';
 
-const OrderItem = ({}) => {
+const OrderItem = ({  }) => { //id
     //takes a list of the full menu, via string titles
     //has a dropdown menu that contains the full menu (needs to be grabbed from the backend on load)
     //and a quantity input field, customer can create arbitrarily large numbers of these via the order form
     const [quantity, setQuantity] = useState(0)
+    //const orderID = id
 
     function getQuantity() {
         return quantity
@@ -19,11 +21,11 @@ const OrderItem = ({}) => {
 
     return (
         <Row>
-            <Col>
-                ITEM
+            <Col className='d-flex justify-content-end'>
+                <h3 className='rubik-mono'>ITEM</h3>
             </Col>
             <Col>
-                <input onChange={e => setQuantity(e.target.value)} type="number" value={quantity}/>
+                <input className='order-input' onChange={e => setQuantity(e.target.value)} type="number" value={quantity}/>
             </Col>
         </Row>
     )
@@ -36,7 +38,7 @@ const OrderForm = ({}) => {
     function addOrderItem() {
         //adds an OrderItem to the OrderForm
         let newOrderItems = Array.from(orderItems)
-        newOrderItems.push(<OrderItem/>)
+        newOrderItems.push(<OrderItem />)
         setOrderItems(newOrderItems)
     }
 
@@ -47,11 +49,11 @@ const OrderForm = ({}) => {
     }
 
     return (
-        <div>
-            <h2>Create New Order</h2>
-            <input onChange={e => setName(e.target.value)} placeholder="Enter Name" value={name} />
-
-            <br/>
+        <Container>
+            <Col className='col-12 text-center pb-4'>
+                <h2 className='rubik-mono'>Create New Order</h2>
+                <input onChange={e => setName(e.target.value)} placeholder="Enter Name" value={name} />
+            </Col>
 
             {/* <button onClick={() => addOrderItem()}>
                 Add Item!
@@ -77,10 +79,13 @@ const OrderForm = ({}) => {
 
             <br/>
 
-            <button onClick={() => createOrder()}>
-                Submit Order!
-            </button>
-        </div>
+
+            <Col className='col-12 text-center'>
+                <Button className='rubik-mono-white' variant='danger' onClick={() => createOrder()}>
+                    Submit Order!
+                </Button>
+            </Col>
+        </Container>
     )
 }
 

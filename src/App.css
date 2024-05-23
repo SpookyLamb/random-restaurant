@@ -51,3 +51,7 @@ body {
 .navbar-light {
   background-color: #050505;
 }
+
+.order-input {
+  max-width: 90px;
+}
