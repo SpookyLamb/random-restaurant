@@ -172,6 +172,8 @@ const OrderForm = ({ customers, setCustomers }) => {
             running_total += orderItem.props.price * quantity
         }
 
+        price_total = price_total.toFixed(2)
+
         console.log("ORDER | CustName: ", customer, " IDs: ", itemIDs, " Quantities: ", quantityList, " Total: ", running_total)
 
         let quantityString = JSON.stringify(quantityList)
