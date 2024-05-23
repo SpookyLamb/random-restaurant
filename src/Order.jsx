@@ -186,7 +186,7 @@ const OrderForm = ({ customers, setCustomers }) => {
         .then(response => {
             console.log("RESPONSE: ", response)
             if (response.status === 200 || response.status === 201) {
-              alert("Your order has been submitted! Your total will be: " + String(running_total))
+              alert("Your order has been submitted! Please arrive for pickup in 30 minutes. Your total will be: " + String(running_total))
             }
           })
         .catch(error => console.log("ERROR: ", error))
