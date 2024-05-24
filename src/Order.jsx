@@ -9,6 +9,10 @@ import { useState } from "react";
 import { useEffect } from 'react';
 import { render } from 'react-dom';
 
+function sleep(ms) { //used to add a delay to orders - I know this isn't the best solution :)
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 const OrderItem = ({ item_id, name, price, quantities, setQuantities }) => { //props are grabbed when submitting an order, don't touch!
     //takes a list of the full menu, via string titles
     //has a dropdown menu that contains the full menu (needs to be grabbed from the backend on load)
@@ -23,10 +27,10 @@ const OrderItem = ({ item_id, name, price, quantities, setQuantities }) => { //p
 
     return (
         <Row>
-            <Col className='d-flex justify-content-end'>
-                <h3 className='rubik-mono'>{name}</h3>
+            <Col className='col-8 d-flex justify-content-center'>
+                <h5 className='rubik-mono'>{name}</h5>
             </Col>
-            <Col>
+            <Col className='col-4'>
                 <input className='order-input' onChange={(e) => {
                     let q = e.target.value
                     if (q > 0) {
@@ -107,7 +111,7 @@ const OrderForm = ({ customers, setCustomers }) => {
         .catch((error) => {console.log("ERROR: ", error); return []})
     }
 
-    function createOrder() {
+    async function createOrder() {
         //pushes order information to the database, creates a new customer if they do not already exist
         //displays the order beneath the order field, and clears the order field
         //has to grab all the information from the OrderItems, can do this by grabbing the list and calling their internal function
@@ -145,12 +149,13 @@ const OrderForm = ({ customers, setCustomers }) => {
             .then(response => {
                 console.log("RESPONSE: ", response)
                 if (response.status === 200 || response.status === 201) {
-                  getCustomers() //update the list
-                  alert("Added customer! Please resubmit your order!") //make the customer try again - NOTE: I know this isn't the best approach. :)
+                  let obj = response.data
+                  customerID = obj.id
                 }
               })
             .catch(error => console.log("ERROR: ", error))
-            return  //quit
+
+            await sleep(2000) //wait a bit before we execute anything else to give the database time to update
         }
 
         let itemIDs = []
@@ -196,6 +201,7 @@ const OrderForm = ({ customers, setCustomers }) => {
         //after completing the order, delete all the items
         setOrderItems([])
         setQuantities({})
+        getCustomers() //update the list
     }
 
     return (
